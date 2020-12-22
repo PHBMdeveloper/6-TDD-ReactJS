@@ -13,6 +13,7 @@ jobs:
       - image: cimg/node:14.5.0 # the primary container, where your job's commands are run
     steps:
       - checkout # check out the code in the project directory
+      - run: yarn install # install package
       - run: yarn test # load tests
 
 workflows:
